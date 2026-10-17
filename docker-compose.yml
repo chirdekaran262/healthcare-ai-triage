@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./healthai
+      dockerfile: Dockerfile
+    container_name: health-triage-backend
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - SERVER_PORT=8080
+      - CORS_ALLOWED_ORIGINS=http://localhost,http://localhost:80,http://localhost:4200
+    healthcheck:
+      test: [ "CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:8080/api/v1/triage/health || exit 1" ]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 25s
+    networks:
+      - triage-net
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: health-triage-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - triage-net
+
+networks:
+  triage-net:
+    driver: bridge
