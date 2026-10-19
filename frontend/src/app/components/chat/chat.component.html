@@ -1,227 +1,276 @@
-<main id="main-content" class="mx-auto min-h-screen max-w-7xl px-4 pb-8 sm:px-6 lg:px-10">
-    <header class="flex h-[76px] items-center justify-between border-b border-[#dce5dd]">
-        <a class="flex items-center gap-3 text-[#203b2c] no-underline" href="#main-content" aria-label="Swasthya home">
-            <span class="grid h-10 w-10 place-items-center rounded-xl bg-[#1f6244] text-white shadow-sm"
-                aria-hidden="true">
-                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none">
-                    <path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7V3Z" fill="currentColor" />
-                </svg>
-            </span>
-            <span class="font-serif text-[23px] font-semibold">Swasthya<span class="text-[#d17a3c]">.</span><span
-                    class="ml-2 hidden align-middle font-sans text-[10px] font-medium tracking-[1.5px] text-[#768178] sm:inline">HEALTH
-                    GUIDANCE</span></span>
-        </a>
-        <span class="text-xs font-medium text-[#53645a] sm:text-sm">Everyday health support</span>
-    </header>
-
-    <section class="page-enter grid gap-5 py-9 sm:py-11 lg:grid-cols-[1fr_auto] lg:items-end">
-        <div>
-            <p class="text-xs font-bold uppercase tracking-[1.5px] text-[#487557]">Everyday care, made clear</p>
-            <h1 class="mt-3 max-w-2xl font-serif text-[36px] leading-[1.12] text-[#1d3428] sm:text-[46px]">A clear next
-                step for your health.</h1>
-            <p class="mt-4 max-w-2xl text-[15px] leading-7 text-[#59675e]">Tell us how you’re feeling. Get
-                understandable guidance for common concerns and know when it’s time to talk to a health professional.
-            </p>
-        </div>
-        <div class="max-w-xs border-l-2 border-[#d17a3c] pl-4 text-sm leading-6 text-[#4c5f52]">
-            <p class="font-semibold">Made for everyday questions</p>
-            <p class="text-[#7b877e]">Private details are optional.</p>
-        </div>
+<main id="main-content" class="min-h-screen px-4 pb-10 mx-auto max-w-7xl sm:px-6 lg:px-10">
+    <section class="page-enter py-9 sm:py-12">
+        <p class="eyebrow">Everyday care, made clear</p>
+        <h1
+            class="mt-3 max-w-2xl font-serif text-[38px] leading-[1.08] tracking-[-.02em] text-brand-900 sm:text-[52px]">
+            A clear next step for your health.</h1>
+        <p class="mt-4 max-w-2xl text-[15px] leading-7 text-ink-muted">Tell us how you're feeling. Get understandable
+            guidance for common concerns and know when it's time to talk to a health professional.</p>
     </section>
 
-    <section
-        class="page-enter page-enter-late grid gap-4 rounded-xl border border-[#efd5c8] border-l-4 border-l-[#ad4a34] bg-[#fff8f3] p-4 shadow-sm sm:grid-cols-[1fr_auto] sm:items-center sm:px-5"
-        aria-labelledby="emergency-title">
-        <div class="flex items-start gap-3">
-            <span class="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[#f7e5db] text-[#9d4328]"
-                aria-hidden="true"><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M10 1.5a8.5 8.5 0 1 0 0 17 8.5 8.5 0 0 0 0-17ZM9 5.25a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0v-5Zm1 9.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z"
-                        clip-rule="evenodd" />
-                </svg></span>
-            <div>
-                <h2 id="emergency-title" class="text-sm font-bold text-[#713523]">Need emergency help?</h2>
-                <p class="mt-1 text-sm leading-6 text-[#70584d]">For severe chest pain, difficulty breathing, heavy
-                    bleeding, or signs of stroke, call for help now.</p>
-                <p class="mt-1 text-xs leading-5 text-[#87533a]">India: 112 for emergencies; 108 ambulance service in
-                    many
-                    states. Outside India, call your local emergency number.</p>
-            </div>
-        </div>
-        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <a href="tel:112"
-                class="inline-flex min-h-11 items-center justify-center rounded-lg bg-[#973d2d] px-4 text-sm font-bold text-white transition hover:bg-[#7f3024] focus-visible:outline-offset-4">Call
-                112</a>
-            <a href="tel:108"
-                class="text-sm font-semibold text-[#824431] underline decoration-[#c9a18f] underline-offset-4">Ambulance
-                108</a>
-        </div>
-    </section>
-
-    <div class="page-enter page-enter-late mt-6 grid items-start gap-5 lg:grid-cols-[1.05fr_.95fr] lg:gap-6">
-        <section class="rounded-xl border border-[#e1e7df] bg-white p-5 shadow-[0_8px_24px_rgba(36,58,43,0.045)] sm:p-7"
-            aria-labelledby="intake-heading">
+    <div class="overflow-hidden rounded-2xl border border-[#e8bdb4] bg-[#fff3ef] shadow-[0_8px_24px_rgba(125,46,38,0.08)]"
+        role="note" aria-label="Emergency warning">
+        <div class="flex flex-col gap-4 border-l-4 border-[#b54232] p-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
             <div class="flex items-start gap-3">
-                <span
-                    class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-[#edf3ed] text-xs font-bold text-[#477354]"
-                    aria-hidden="true">01</span>
+                <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#b54232] text-white" aria-hidden="true">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 8v5m0 3h.01M10.3 3.9 2.8 17a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3l-7.5-13a2 2 0 0 0-3.4 0Z" />
+                    </svg>
+                </span>
                 <div>
-                    <p class="text-[11px] font-bold uppercase tracking-[1.3px] text-[#487557]">Your health question</p>
-                    <h2 id="intake-heading" class="mt-1 font-serif text-2xl text-[#1d3428]">What’s going on?</h2>
+                    <p class="text-sm font-extrabold text-[#7d2e26]">Need emergency help?</p>
+                    <p class="mt-1 text-sm leading-5 text-[#713c34]">For chest pain, trouble breathing, heavy bleeding, or signs of stroke, call emergency services now.</p>
                 </div>
             </div>
-            <p class="mb-5 mt-3 text-sm leading-6 text-[#6a776e]">Share what you’re feeling and when it started. A few
+            <div class="flex shrink-0 gap-2 pl-[52px] sm:pl-0">
+                <a href="tel:112" class="inline-flex min-h-10 items-center justify-center rounded-lg bg-[#a63d30] px-4 text-sm font-bold text-white transition hover:bg-[#873126] focus-visible:outline-white">Call 112</a>
+                <a href="tel:108" class="inline-flex min-h-10 items-center justify-center rounded-lg border border-[#d49a8f] bg-white px-4 text-sm font-bold text-[#7d2e26] transition hover:bg-[#fff9f7]">Ambulance 108</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="mt-6 grid grid-cols-2 gap-2 rounded-2xl border border-line bg-white p-2 shadow-card" aria-label="Health guidance steps">
+        <button type="button" (click)="goToStep(1)" [attr.aria-current]="currentStep() === 1 ? 'step' : null"
+            [ngClass]="currentStep() === 1 ? 'border-brand-200 bg-brand-50 text-brand-900 shadow-sm' : 'border-transparent text-ink-muted hover:bg-[#f6f8f5]'"
+            class="flex min-h-14 items-center gap-3 rounded-xl border px-3 py-2 text-left transition sm:px-4">
+            <span [ngClass]="currentStep() === 1 ? 'bg-brand-700 text-white' : 'bg-[#edf0eb] text-ink-muted'"
+                class="grid h-8 w-8 shrink-0 place-items-center rounded-full text-sm font-bold">1</span>
+            <span>
+                <span class="block text-sm font-bold">Your symptoms</span>
+                <span class="mt-0.5 hidden text-xs sm:block">Tell us what's going on</span>
+            </span>
+        </button>
+        <button type="button" (click)="goToStep(2)" [attr.aria-current]="currentStep() === 2 ? 'step' : null"
+            [ngClass]="currentStep() === 2 ? 'border-brand-200 bg-brand-50 text-brand-900 shadow-sm' : 'border-transparent text-ink-muted hover:bg-[#f6f8f5]'"
+            class="flex min-h-14 items-center gap-3 rounded-xl border px-3 py-2 text-left transition sm:px-4">
+            <span [ngClass]="currentStep() === 2 ? 'bg-brand-700 text-white' : 'bg-[#edf0eb] text-ink-muted'"
+                class="grid h-8 w-8 shrink-0 place-items-center rounded-full text-sm font-bold">2</span>
+            <span>
+                <span class="block text-sm font-bold">Your guidance</span>
+                <span class="mt-0.5 hidden text-xs sm:block">Review your next steps</span>
+            </span>
+        </button>
+    </nav>
+
+    <div class="mt-4">
+        @if (currentStep() === 1) {
+        <section class="card" aria-labelledby="intake-heading">
+            <p class="eyebrow">Step 1 of 2</p>
+            <h2 id="intake-heading" class="mt-1 heading">What's going on?</h2>
+            <p class="mt-2 text-sm leading-6 text-ink-muted">Share what you're feeling and when it started. A few
                 details can help.</p>
 
-            <div class="mb-5 border-y border-[#edf0eb] py-4">
-                <p class="mb-2 text-xs font-bold text-[#3d4c42]">Try an example</p>
-                <div class="flex flex-wrap gap-2">
-                    @for (prompt of quickPrompts; track prompt.label) {
-                    <button type="button" (click)="setQuickPrompt(prompt.text)"
-                        class="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#dbe5dc] bg-[#f8faf7] px-3 text-xs font-semibold text-[#3e654a] transition hover:-translate-y-px hover:border-[#8db39a] hover:bg-[#f0f6f0] focus-visible:outline-offset-2">{{
-                        prompt.label }} <span aria-hidden="true" class="text-base text-[#578267]">+</span></button>
-                    }
-                </div>
+            <div class="my-5 flex flex-wrap items-center gap-2 border-y border-[#edf0eb] py-4">
+                <span class="text-xs font-bold text-ink">Try an example:</span>
+                @for (prompt of quickPrompts; track prompt.label) {
+                <button type="button" (click)="setQuickPrompt(prompt.text)"
+                    class="min-h-9 rounded-lg border border-[#dbe5dc] bg-[#f8faf7] px-3 text-xs font-semibold text-brand-700 transition hover:border-[#8db39a] hover:bg-brand-50">
+                    {{ prompt.label }}
+                </button>
+                }
             </div>
 
             <form [formGroup]="triageForm" (ngSubmit)="submitTriage()" class="flex flex-col gap-4">
                 <div>
-                    <label for="symptoms" class="mb-2 block text-sm font-semibold text-[#34463a]">Describe your symptoms
-                        <span class="text-[#a34432]">*</span></label>
+                    <label for="symptoms" class="block mb-2 text-sm font-semibold text-ink">Describe your symptoms <span
+                            class="text-[#a34432]">*</span></label>
                     <textarea id="symptoms" formControlName="symptoms" rows="5"
-                        aria-describedby="symptoms-help symptoms-error"
-                        placeholder="For example: I’ve had a sore throat since yesterday, and it hurts when I swallow."
-                        class="w-full resize-y rounded-lg border border-[#cfd9d0] bg-white px-3.5 py-3 text-[15px] leading-6 text-[#27372d] placeholder:text-[#97a199] focus:border-[#4e8b63] focus:outline-none focus:ring-2 focus:ring-[#4e8b63]/15"></textarea>
-                    <div class="mt-1.5 flex justify-between gap-3 text-[11px] leading-5 text-[#859087]">
-                        <p id="symptoms-help">When did it start? Is it getting better or worse?</p><span
-                            class="shrink-0">{{ triageForm.get('symptoms')?.value?.length || 0 }}/2000</span>
+                        class="field resize-y text-[15px] leading-6" aria-describedby="symptoms-help"
+                        placeholder="For example: I've had a sore throat since yesterday, and it hurts when I swallow."></textarea>
+                    <div class="mt-1.5 flex justify-between gap-3 text-[11px] text-ink-faint">
+                        <p id="symptoms-help">When did it start? Is it getting better or worse?</p>
+                        <span>{{ triageForm.controls.symptoms.value?.length || 0 }}/2000</span>
                     </div>
-                    @if (triageForm.get('symptoms')?.touched && triageForm.get('symptoms')?.invalid) {
-                    <span id="symptoms-error" role="alert" class="mt-1 block text-xs text-[#a13d30]">Please enter
-                        between 5 and 2,000 characters.</span>
+                    @if (triageForm.controls.symptoms.touched && triageForm.controls.symptoms.invalid) {
+                    <span role="alert" class="mt-1 block text-xs text-[#a13d30]">Please enter between 5 and 2,000
+                        characters.</span>
                     }
                 </div>
 
                 <details class="border-y border-[#edf0eb]">
-                    <summary class="cursor-pointer py-3 text-sm font-semibold text-[#356447]">Add more context <span
-                            class="font-normal text-[#869087]">(optional)</span></summary>
+                    <summary class="py-3 text-sm font-semibold cursor-pointer text-brand-700">Add more context <span
+                            class="font-normal text-ink-faint">(optional)</span></summary>
                     <div class="grid gap-3 pb-4 sm:grid-cols-2">
-                        <div><label for="age"
-                                class="mb-1.5 block text-xs font-semibold text-[#3d4c42]">Age</label><input id="age"
-                                type="number" min="0" max="120" formControlName="age" placeholder="Years"
-                                class="min-h-10 w-full rounded-lg border border-[#cfd9d0] px-3 text-sm focus:border-[#4e8b63] focus:outline-none focus:ring-2 focus:ring-[#4e8b63]/15">
+                        <div>
+                            <label for="age" class="mb-1.5 block text-xs font-semibold text-ink">Age</label>
+                            <input id="age" type="number" min="0" max="120" formControlName="age" placeholder="Years"
+                                class="field">
                         </div>
-                        <div><label for="biologicalSex" class="mb-1.5 block text-xs font-semibold text-[#3d4c42]">Sex at
-                                birth</label><select id="biologicalSex" formControlName="biologicalSex"
-                                class="min-h-10 w-full rounded-lg border border-[#cfd9d0] bg-white px-3 text-sm focus:border-[#4e8b63] focus:outline-none focus:ring-2 focus:ring-[#4e8b63]/15">
+                        <div>
+                            <label for="biologicalSex" class="mb-1.5 block text-xs font-semibold text-ink">Sex at
+                                birth</label>
+                            <select id="biologicalSex" formControlName="biologicalSex" class="field">
                                 <option value="">Prefer not to say</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
-                            </select></div>
-                        <div class="sm:col-span-2"><label for="knownConditions"
-                                class="mb-1.5 block text-xs font-semibold text-[#3d4c42]">Conditions or
-                                medicines</label><input id="knownConditions" type="text"
-                                formControlName="knownConditions"
-                                placeholder="For example: asthma, diabetes, or medicines you take"
-                                class="min-h-10 w-full rounded-lg border border-[#cfd9d0] px-3 text-sm focus:border-[#4e8b63] focus:outline-none focus:ring-2 focus:ring-[#4e8b63]/15">
+                            </select>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label for="knownConditions" class="mb-1.5 block text-xs font-semibold text-ink">Conditions
+                                or medicines</label>
+                            <input id="knownConditions" type="text" formControlName="knownConditions" class="field"
+                                placeholder="For example: asthma, diabetes, or medicines you take">
                         </div>
                     </div>
                 </details>
 
-                <button type="submit" [disabled]="isLoading()"
-                    class="flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#1e6043] px-5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#164a34] hover:shadow-md focus-visible:outline-offset-4 disabled:cursor-wait disabled:opacity-70">
+                <button type="submit" [disabled]="isLoading()" class="btn-primary">
                     @if (isLoading()) {
-                    <svg class="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24" aria-hidden="true">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
-                        </circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z">
-                        </path>
-                    </svg><span>Preparing your guidance…</span>
-                    } @else { <span>Get my next steps</span><span aria-hidden="true"
-                        class="text-lg font-normal">?</span> }
+                    <span class="w-4 h-4 border-2 border-current rounded-full animate-spin border-r-transparent"
+                        aria-hidden="true"></span>
+                    Preparing your guidance...
+                    } @else {
+                    Get my next steps
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 12h14m-6-6 6 6-6 6" />
+                    </svg>
+                    }
                 </button>
             </form>
 
             @if (errorMessage()) {
-            <div role="alert"
-                class="mt-4 rounded-lg border border-[#efc9c2] bg-[#fff6f3] p-3.5 text-sm leading-6 text-[#71392f]">
-                <strong class="block">We couldn’t get your guidance.</strong>{{ errorMessage() }}
+            <div role="alert" class="mt-4 alert-error">
+                <strong class="block">We couldn't get your guidance.</strong>{{ errorMessage() }}
             </div>
             }
         </section>
 
-        <section
-            class="min-h-[390px] rounded-xl border border-[#e1e7df] bg-white p-5 shadow-[0_8px_24px_rgba(36,58,43,0.045)] sm:p-7"
-            aria-live="polite" aria-label="Your health guidance">
+        } @else {
+        <section id="guidance" tabindex="-1" class="card min-h-[420px] focus:outline-none" aria-live="polite"
+            aria-label="Your health guidance">
             @if (assessment(); as res) {
-            <div class="mb-5 flex items-start gap-3">
-                <span
-                    class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-[#edf3ed] text-xs font-bold text-[#477354]"
-                    aria-hidden="true">02</span>
+            <header class="mb-5 flex flex-wrap items-start justify-between gap-3 border-b border-[#edf0eb] pb-4">
                 <div>
-                    <p class="text-[11px] font-bold uppercase tracking-[1.3px] text-[#487557]">Your guidance</p>
-                    <h2 class="mt-1 font-serif text-2xl text-[#1d3428]">Your next steps</h2>
+                <p class="eyebrow">Step 2 of 2</p>
+                <h2 class="mt-1 heading">Your next steps</h2>
+                <p class="mt-1.5 text-sm leading-6 text-ink-muted">A summary based on the symptoms and context you shared.</p>
+                </div>
+                <button type="button" (click)="goToStep(1)" class="btn-ghost">Edit symptoms</button>
+            </header>
+
+            <div class="flex gap-4 rounded-2xl border p-4 sm:p-5" [ngClass]="levels[res.triageLevel].classes">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/80 shadow-sm" aria-hidden="true">
+                    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path [attr.d]="levels[res.triageLevel].icon" />
+                    </svg>
+                </span>
+                <div class="min-w-0 self-center">
+                    <p class="text-base font-extrabold">{{ levels[res.triageLevel].title }}</p>
+                    <p class="mt-1 text-sm leading-6">{{ levels[res.triageLevel].message }}</p>
                 </div>
             </div>
-            <div class="flex gap-3 rounded-lg border p-4"
-                [ngClass]="{'border-[#e8bdb4] bg-[#fff3ef] text-[#7d2e26]': res.triageLevel === 'RED', 'border-[#ead6a5] bg-[#fff9e9] text-[#765516]': res.triageLevel === 'YELLOW', 'border-[#c8dfcd] bg-[#f1f8f1] text-[#285c3a]': res.triageLevel === 'GREEN'}">
-                <span class="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-current" aria-hidden="true"></span>
-                <div>
-                    <p class="text-sm font-bold">{{ res.triageLevel === 'RED' ? 'Emergency care' : res.triageLevel ===
-                        'YELLOW' ? 'Get medical advice' : 'Self-care may help' }}</p>
-                    <p class="mt-1 text-sm leading-6 text-[#5f6259]">{{ res.triageLevel === 'RED' ? 'Please seek
-                        emergency help now.' : res.triageLevel === 'YELLOW' ? 'Speak with a healthcare professional
-                        soon.' : 'These symptoms may be manageable at home.' }}</p>
-                </div>
-            </div>
+
             @if (res.triageLevel === 'RED') {
             <div
-                class="mt-3 flex flex-wrap items-center justify-between gap-3 rounded-lg bg-[#973d2d] px-4 py-3 text-sm text-white">
-                <p>Do not wait for online advice. Call emergency services now.</p><a href="tel:112"
-                    class="font-bold underline underline-offset-4">Call 112 in India</a>
+                class="mt-4 overflow-hidden rounded-2xl border-2 border-[#9f3428] bg-[#fff3ef] shadow-[0_8px_24px_rgba(125,46,38,0.12)]">
+                <div class="flex items-start gap-3 border-l-4 border-[#b54232] p-4 sm:p-5">
+                    <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[#a63d30] text-white" aria-hidden="true">
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 8v5m0 3h.01M10.3 3.9 2.8 17a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3l-7.5-13a2 2 0 0 0-3.4 0Z" />
+                        </svg>
+                    </span>
+                    <div class="min-w-0 flex-1">
+                        <h3 class="text-base font-extrabold text-[#7d2e26]">Act now - get emergency care</h3>
+                        <p class="mt-1 text-sm leading-6 text-[#713c34]">Do not wait for online advice. Call emergency services or go to the nearest emergency department now.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <a href="tel:112" class="inline-flex min-h-10 items-center justify-center rounded-lg bg-[#a63d30] px-4 text-sm font-bold text-white transition hover:bg-[#873126]">Call 112</a>
+                            <a href="tel:108" class="inline-flex min-h-10 items-center justify-center rounded-lg border border-[#d49a8f] bg-white px-4 text-sm font-bold text-[#7d2e26] transition hover:bg-[#fff9f7]">Ambulance 108</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             }
-            <div class="mt-6">
-                <h3 class="text-sm font-bold text-[#34463a]">What you can do now</h3>
-                <ol class="mt-3 space-y-3">
+
+            <div class="mt-5 rounded-2xl border border-[#e7ece6] bg-[#f8faf7] p-4 sm:p-5">
+                <div class="flex items-center gap-2">
+                    <span class="grid h-7 w-7 place-items-center rounded-lg bg-white text-brand-700 shadow-sm" aria-hidden="true">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 5h10M9 12h10M9 19h10M4 5h.01M4 12h.01M4 19h.01" />
+                        </svg>
+                    </span>
+                    <h3 class="text-sm font-bold text-ink">What you can do now</h3>
+                </div>
+                <ol class="mt-4 space-y-3">
                     @for (action of res.immediateActions; track $index) {
-                    <li class="flex items-start gap-3 text-sm leading-6 text-[#5e6c62]"><span
-                            class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#edf4ee] text-[11px] font-bold text-[#3a704c]">{{
+                    <li class="flex items-start gap-3 text-sm leading-6 text-ink-muted">
+                        <span
+                            class="grid h-7 w-7 shrink-0 place-items-center rounded-lg border border-brand-200 bg-white text-xs font-bold text-brand-700">{{
                             $index + 1 }}</span>
-                        <p>{{ action }}</p>
+                        <p class="pt-0.5">{{ action }}</p>
                     </li>
                     }
                 </ol>
             </div>
-            <div class="mt-5 grid gap-4 border-t border-[#edf0eb] pt-4 sm:grid-cols-2">
-                <div>
-                    <h3 class="text-xs font-bold text-[#477354]">Care tips</h3>
-                    <p class="mt-1.5 text-sm leading-6 text-[#5e6c62]">{{ res.careAdvice }}</p>
-                </div>
-                <div>
-                    <h3 class="text-xs font-bold text-[#477354]">When to follow up</h3>
-                    <p class="mt-1.5 text-sm leading-6 text-[#5e6c62]">{{ res.followUpRecommendation }}</p>
+
+            <div class="mt-4 grid items-start gap-3 sm:grid-cols-2">
+                <article class="relative overflow-hidden rounded-2xl border border-[#dfe8dd] bg-white p-4 shadow-[0_8px_22px_rgba(36,58,43,0.05)] sm:p-5">
+                    <span class="absolute inset-x-0 top-0 h-1 bg-[#5e9b68]" aria-hidden="true"></span>
+                    <div class="flex items-center gap-3">
+                        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#e8f3e8] text-brand-700" aria-hidden="true">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3v2m0 14v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M3 12h2m14 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+                                <circle cx="12" cy="12" r="4" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-[1.2px] text-brand-600">Practical support</p>
+                            <h3 class="mt-0.5 text-base font-bold text-brand-900">Care tips</h3>
+                        </div>
+                    </div>
+                    <p class="mt-4 rounded-xl border border-[#e8eee6] bg-[#f8faf7] p-3.5 text-sm leading-6 text-ink-muted">
+                        {{ res.careAdvice }}
+                    </p>
+                </article>
+                <article class="relative overflow-hidden rounded-2xl border border-[#dfe5eb] bg-white p-4 shadow-[0_8px_22px_rgba(36,58,43,0.05)] sm:p-5">
+                    <span class="absolute inset-x-0 top-0 h-1 bg-[#6686aa]" aria-hidden="true"></span>
+                    <div class="flex items-center gap-3">
+                        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#e9eff6] text-[#46617b]" aria-hidden="true">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 7v5l3 2" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-[1.2px] text-[#577393]">Know what comes next</p>
+                            <h3 class="mt-0.5 text-base font-bold text-[#344b63]">When to follow up</h3>
+                        </div>
+                    </div>
+                    <p class="mt-4 rounded-xl border border-[#e7ebf0] bg-[#f7f9fb] p-3.5 text-sm leading-6 text-ink-muted">
+                        {{ res.followUpRecommendation }}
+                    </p>
+                </article>
+            </div>
+            <p class="mt-4 rounded-xl border border-[#e7ece6] bg-[#f5f6f3] px-4 py-3 text-xs leading-5 text-ink-faint">
+                <strong class="mb-1 block font-bold text-ink-muted">A helpful reminder</strong>
+                {{ res.disclaimer }}
+            </p>
+
+            } @else if (isLoading()) {
+            <div class="space-y-4" role="status" aria-label="Preparing your guidance">
+                <div class="h-20 animate-pulse rounded-2xl bg-brand-100"></div>
+                <div class="h-40 animate-pulse rounded-2xl bg-brand-50"></div>
+                <div class="grid gap-3 sm:grid-cols-2">
+                    <div class="h-28 animate-pulse rounded-2xl bg-brand-50"></div>
+                    <div class="h-28 animate-pulse rounded-2xl bg-brand-50"></div>
                 </div>
             </div>
-            <p class="mt-5 border-t border-[#edf0eb] pt-3 text-xs leading-5 text-[#7c867e]">{{ res.disclaimer }}</p>
+
             } @else {
             <div class="flex min-h-[340px] flex-col justify-center">
-                <span
-                    class="mb-5 grid h-11 w-11 place-items-center rounded-xl bg-[#edf4ee] text-2xl font-light text-[#487856]"
-                    aria-hidden="true">+</span>
-                <p class="text-[11px] font-bold uppercase tracking-[1.3px] text-[#487557]">Your personal next steps</p>
-                <h2 class="mt-2 font-serif text-2xl text-[#1d3428]">Guidance, made clear.</h2>
-                <p class="mt-2 max-w-md text-sm leading-6 text-[#69766c]">Describe how you feel to see practical steps
-                    and advice on when to seek care.</p>
+                <p class="eyebrow">Your personal next steps</p>
+                <h2 class="mt-2 heading">Guidance, made clear.</h2>
+                <p class="max-w-md mt-2 text-sm leading-6 text-ink-muted">Your personalized guidance will appear here after you share your symptoms.</p>
+                <button type="button" (click)="goToStep(1)" class="btn-primary mt-6 max-w-xs">Enter symptoms</button>
             </div>
             }
         </section>
+        }
     </div>
-
-    <footer
-        class="mt-6 flex flex-col gap-2 border-t border-[#e1e7df] py-4 text-xs leading-5 text-[#718077] sm:flex-row sm:justify-between sm:gap-6">
-        <p><strong class="text-[#4c5f52]">Helpful guidance, not a diagnosis.</strong> If you feel seriously unwell or
-            symptoms worsen, seek medical care.</p>
-        <p>Discuss health concerns with a qualified professional.</p>
-    </footer>
 </main>

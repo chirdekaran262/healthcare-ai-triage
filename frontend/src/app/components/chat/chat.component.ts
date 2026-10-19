@@ -1,10 +1,12 @@
-import { Component, signal, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { timeout, TimeoutError } from 'rxjs';
 import { TriageService } from '../../services/triage.service';
 import { TriageResponse } from '../../models/triage.models';
+
+interface LevelMeta { title: string; message: string; classes: string; icon: string; }
 
 @Component({
     selector: 'app-chat',
@@ -17,8 +19,9 @@ export class ChatComponent {
     private readonly triageService = inject(TriageService);
 
     readonly assessment = signal<TriageResponse | null>(null);
-    readonly isLoading = signal<boolean>(false);
+    readonly isLoading = signal(false);
     readonly errorMessage = signal<string | null>(null);
+    readonly currentStep = signal<1 | 2>(1);
 
     readonly triageForm = this.fb.group({
         symptoms: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(2000)]],
@@ -33,8 +36,30 @@ export class ChatComponent {
         { label: 'Headache', text: 'I have had a mild headache since this morning. It came on gradually and I have no other symptoms.' }
     ];
 
-    setQuickPrompt(promptText: string): void {
-        this.triageForm.patchValue({ symptoms: promptText });
+    readonly levels: Record<string, LevelMeta> = {
+        RED: {
+            title: 'Emergency care', message: 'Please seek emergency help now.',
+            classes: 'border-[#e8bdb4] bg-[#fff3ef] text-[#7d2e26]',
+            icon: 'M12 8v5m0 3h.01M10.3 3.9 2.8 17a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3l-7.5-13a2 2 0 0 0-3.4 0Z'
+        },
+        YELLOW: {
+            title: 'Get medical advice', message: 'Speak with a healthcare professional soon.',
+            classes: 'border-[#ead6a5] bg-[#fff9e9] text-[#765516]',
+            icon: 'M12 11v5m0-8h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
+        },
+        GREEN: {
+            title: 'Self-care may help', message: 'These symptoms may be manageable at home.',
+            classes: 'border-[#c8dfcd] bg-[#f1f8f1] text-[#285c3a]',
+            icon: 'm5 12 4 4L19 6'
+        }
+    };
+
+    setQuickPrompt(text: string): void {
+        this.triageForm.patchValue({ symptoms: text });
+    }
+
+    goToStep(step: 1 | 2): void {
+        this.currentStep.set(step);
     }
 
     submitTriage(): void {
@@ -60,6 +85,7 @@ export class ChatComponent {
                     this.errorMessage.set('The health service returned an unexpected response. Please try again.');
                 } else {
                     this.assessment.set(res);
+                    this.currentStep.set(2);
                 }
                 this.isLoading.set(false);
             },
@@ -71,12 +97,10 @@ export class ChatComponent {
     }
 
     private toMessage(err: unknown): string {
-        if (err instanceof TimeoutError) {
-            return 'The health service is taking longer than expected. Please try again.';
-        }
+        if (err instanceof TimeoutError) return 'The health service is taking longer than expected. Please try again.';
         if (err instanceof HttpErrorResponse) {
-            if (err.status === 0) return 'We can’t reach the health service. Please check your connection and try again.';
-            if (err.status === 400) return 'Some details weren’t accepted. Please check your entries and try again.';
+            if (err.status === 0) return "We can't reach the health service. Please check your connection and try again.";
+            if (err.status === 400) return "Some details weren't accepted. Please check your entries and try again.";
             return `The health service ran into a problem (error ${err.status}). Please try again.`;
         }
         return 'Something went wrong. Please try again in a moment.';
